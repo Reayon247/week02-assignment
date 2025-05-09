@@ -89,11 +89,40 @@ fullContainer.appendChild(mainImage);
 //   return imageIndex;
 // }
 
-// const prevButton = document.getElementById("prevButton");
-// const nextButton = document.getElementById("nextButton");
+const prevButton = document.getElementById("prevButton");
+const nextButton = document.getElementById("nextButton");
 
 // prevButton.addEventListener("click", prevButtonClick(imageIndex));
 
 // nextButton.addEventListener("click", nextButtonClick(imageIndex));
 
 //in my head, all of this should work to change the imageIndex value at least but it just doesnt work, and then i search up how and its so complicated and different it just gets me even more lost. I wouldnt even know where to begin to get the image to change when the index value changes. I see the eventlistener doesnt like me giving the funtion an argument, why???
+
+prevButton.addEventListener("click", function () {
+  imageIndex - 1;
+  return imageIndex;
+});
+
+nextButton.addEventListener("click", function (imageIndex) {
+  imageIndex + 1;
+  console.log(imageIndex);
+  return imageIndex;
+});
+// why is this printing a pointer event instead of the image index??
+
+if (imageIndex === 0) {
+  console.log("0");
+} else if (imageIndex === 1) {
+  console.log("1");
+} else if (imageIndex === 2) {
+  console.log("2");
+} else if (imageIndex === 3) {
+  console.log("3");
+} else if (imageIndex === 4) {
+  console.log("4");
+} else if (imageIndex === 5) {
+  console.log("5");
+} else if (imageIndex === 6) {
+  console.log("6");
+}
+// i was thinking maybe using if the index === a number to run a funtion similar to the one above if not the same to switch the background if i used buttons to change the imageindex number. I think im just completely misunderstanding functions or the way arguments or parameters work though
