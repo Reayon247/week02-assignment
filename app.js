@@ -68,9 +68,11 @@ function createBigImage(largeImage, index) {
   return imageIndex;
 }
 
+// It console logs the correct imageIndex here, but i dont think its returning it or the rest of the code cant see it
+
 const homeImage = images[0];
 console.log(homeImage);
-// createBigImage(currentImage)
+// createBigImage(homeImage)
 // why wouldnt me putting currentImage in the fuction above work?? why did i have to type it out again and just do it like how ive done below im so confused
 let mainImage = document.createElement("img");
 mainImage.setAttribute("src", homeImage.imageSrc);
@@ -103,8 +105,9 @@ prevButton.addEventListener("click", function () {
   return imageIndex;
 });
 
-nextButton.addEventListener("click", function (imageIndex) {
-  imageIndex + 1;
+nextButton.addEventListener("click", function (imgIndex) {
+  // imgIndex + 1
+  imageIndex = imgIndex + 1;
   console.log(imageIndex);
   return imageIndex;
 });
